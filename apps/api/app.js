@@ -37,11 +37,11 @@ app.use(auth.ensureSession());
 app.use(bodyParser.json());
 
 // API endpoints
-var system_endpoint;
-system_endpoint = require('./controllers/system_endpoint.js');
+var mobile_endpoint;
+mobile_endpoint = require('./controllers/mobile_endpoint.js');
 
 // Set up API calls
-app.all('/system*', system_endpoint);
+app.all('/mobile*', mobile_endpoint);
 
 app.use(function errorHandler (err, req, res, next) {
   var e = { error: err };
